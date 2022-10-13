@@ -40,7 +40,16 @@ const fallo = (status) =>{
     console.log(status)
 }
 
-//invocar la funcion
-get_data(url).then((data)=>{
-    exito(data)
-})
+//invocar la funcion de modo async await
+
+const f = async function(){
+   try{
+     let response = await get_data(url) 
+     exito(response)
+   }catch(error){
+     fallo(error)
+   }
+   
+}
+f()
+
