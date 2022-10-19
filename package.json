@@ -5,7 +5,7 @@
   "type": "commonjs",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon promises/1_simple_arrow.js"
+    "dev": "nodemon await/2_axios.js"
   },
   "keywords": [],
   "author": "",

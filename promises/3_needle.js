@@ -1,6 +1,6 @@
 const needle = require('needle')
 
-const endpoint = "https://pokeapi.co/api/v2/type"
+const endpoint = "https://restcountries.com/v3.1/all"
 
 needle('get' , endpoint)
     .then((response)=>{

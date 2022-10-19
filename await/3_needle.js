@@ -1,20 +1,20 @@
 const needle = require('needle')
 
-const endpoint="https://pokeapi.co/api/v2/type"
+const endpoint="https://anime-facts-rest-api.herokuapp.com/api/v1"
 
 const f = async () =>{
     try {
         const response = await needle('get' , endpoint)
-        exito(response.body)
+        exito(response.data)
     } catch (error) {
         fallo(error)
     }
 }
 //funcion callback: exito
 const exito = (response) =>{
-    const tipos =response.results
+    const tipos =response
     tipos.forEach(element => {
-        console.log(`Tipo:${element.name}`)
+        console.log(`Tipo:${element.anime_name}`)
         console.log('---------------------')
     });
 }

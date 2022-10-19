@@ -21,7 +21,7 @@ const f = async ()=>{
 const exito = (response) =>{
     const tipos = response.results
     tipos.forEach(element => {
-        console.log(`Tipo:${element.anime_id}`)
+        console.log(`Tipo:${element.anime_name}`)
         console.log('---------------------')
     });
 }
@@ -32,5 +32,3 @@ const fallo = (status) =>{
 }
 
 f()
-
-
